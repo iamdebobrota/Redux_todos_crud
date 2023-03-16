@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { updateTodo } from "../Redux/action";
 
 const Edit = ({ data, editShowData, renderData }) => {
-  console.log(data, "vivek");
+
   const dispatch = useDispatch();
   const [value, setValue] = useState(data.title);
 

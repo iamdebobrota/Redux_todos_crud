@@ -37,7 +37,12 @@ const Row = ({ data, rowID, renderData }) => {
         </Center>
         <Center flex="4">
           {editShow ? (
-            <Text  style={{textDecoration : data?.status ? "line-through" : ""}} fontWeight="bold"> {title}</Text>
+            <Text
+              style={{ textDecoration: data?.status ? "line-through" : "" }}
+              fontWeight="bold">
+              {" "}
+              {title}
+            </Text>
           ) : (
             <Edit
               data={data}
@@ -47,15 +52,14 @@ const Row = ({ data, rowID, renderData }) => {
           )}
         </Center>
         <Center flex="2">
-          <Button colorScheme="blue" onClick={() => editShowData()}>   
+          <Button colorScheme="blue" onClick={() => editShowData()}>
             <EditIcon />
           </Button>
         </Center>
         <Center flex="2">
           <Button
             colorScheme={status ? "green" : "yellow"}
-            onClick={() => handleStatus({ ...data })}
-          >
+            onClick={() => handleStatus({ ...data })}>
             {status ? "done" : "not done"}
           </Button>
         </Center>

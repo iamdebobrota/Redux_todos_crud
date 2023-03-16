@@ -72,7 +72,6 @@ const statusTodoError = () => {
 //  outer(10)(4)
 
 const getTodos = (dispatch) => {
-  console.log("gettods calling");
   dispatch(getTodosRequest()); // isLoadig  -> true
   return axios
     .get(`${API_URL}`)
@@ -140,8 +139,6 @@ const deleteTodo = (id) => async (dispatch) => {
 
 export const updateTodo = (payload) => async (dispatch) => {
   const { id } = payload;
-  console.log("chinta siva")
-  console.log("id at action", id);
   dispatch({ type: types.UPDATE_TODO_REQUEST });
   try {
     const res = await axios.put(`${API_URL}/${id}`, payload);

@@ -21,7 +21,6 @@ const Todos = () => {
 
   useEffect(() => {
     dispatch(getTodos);
-    console.log("called");
   }, []);
 
   const renderData = () => {
