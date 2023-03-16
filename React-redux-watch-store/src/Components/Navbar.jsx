@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { shallowEqual, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import url  from '../watch.png';
+
 
 const Navbar = () => {
 
@@ -18,7 +18,7 @@ const Navbar = () => {
       <div data-testid="navbar-home-link">
         <Link to="/">
         <img
-          src={`${url}`}
+          src="https://m.media-amazon.com/images/I/61ZjlBOp+rL._SX679_.jpg"
           width="60px"
           alt="logo"
           style={{display:"block"}}
